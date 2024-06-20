@@ -32,7 +32,9 @@ now you should be able to enjoy that extra vertical 44px
 differences between tabs and urlbar. there's an extension to customize your 
 theme, so you can pick the same color for your url and tabs bar.  
 here's the link for [my gruvbox theme](https://color.firefox.com/?theme=XQAAAAIcAQAAAAAAAABBKYhm849SCia2CaaEGccwS-xMDPr23naIF863_287CelZc0d6IBKdWAiuXG9Z5Lzq5gyMHG8j2XzJbdPiNnGhrHrCXzsDVR22R2tTfl5tKvIU3nYr57p7mbgGcLzwPa9aIMO6w3tTtyYy1Aa1lGGW1qf_RQjT04ZZIFwsniBVqVa3zA44OqDiwniE68nRTfLZkRvmI0PlhyDQzRA_QH34h1MmwlG1sStZ1K6_GMvylkkowAB0e__c9UgA) in the screenshot  
-- on your laptop, consider using your panel/start menu in vertical mode too :p  
+- on your laptop, consider using your panel/start menu in vertical mode too :p
+- if you need more space in navbar for your extensions, play with the variables to match the desired case
+ 
   
 ---  
   
