@@ -16,7 +16,7 @@ it's needed, I hit `alt+d` and it does the job.
   1. click the menu (3-bar) button > Help > More Troubleshooting Information  
   2. find `Profile Directory` (you can use ctrl+f) and click `Open Directory` button next to it  
   3. from the opened location, go to `chrome` directory (create if doesn't exist)  
-  4. create a file named `userChrome.css` and paste the styles (from the userChrome file in that repo)  
+  4. create a file named `userChrome.css` and paste the styles from [`userChrome.css`](./userChrome.css) in that repo
   
 ### Enable loading custom style  
   1. type `about:config` into url bar and hit enter ("accept the risk" to continue)  
@@ -38,47 +38,6 @@ here's the link for [my gruvbox theme](https://color.firefox.com/?theme=XQAAAAIc
   
 ---  
   
-here's the styles for `userChrome.css` if you're too lazy to download the file.  
-
-properties `--navbar-width`, `--navbar-width-focused` and 
-`--url-max-width-not-focused` are self explanatory enough I believe. customize 
-however you want
-  
-```css  
-:root {
-  --navbar-width: 400px; 
-  --navbar-width-focused: 800px; 
-  --url-max-width-not-focused: 200px; 
-  /* tabs-width is the remaining part */
-}
-
-/* prevent urlbar from pushing the icons */
-#urlbar-container {
-  max-width: var(--url-max-width-not-focused);
-}
-
-/* rise the url bar to top and margin from right to shrink its width */
-#nav-bar {
-  margin: -44px calc(100vw - var(--navbar-width)) 0px 0px !important;
-}
-
-/* give empty space in tabs' left for placing navbar */
-#TabsToolbar {
-  -moz-padding-start: var(--navbar-width) !important;
-}
-
-/* make navbar longer when focused */
-#nav-bar[urlbar-exceeds-toolbar-bounds="true"] {
-  margin: -44px calc(100vw - var(--navbar-width-focused)) 0px 0px !important;
-}
-
-/* move tabs bar even more left when focused */
-#titlebar:has(+ #nav-bar[urlbar-exceeds-toolbar-bounds="true"]) #TabsToolbar {
-  -moz-padding-start: var(--navbar-width-focused) !important;
-}
-
-/* make url field grow to url container when focused */
-#nav-bar[urlbar-exceeds-toolbar-bounds="true"] #urlbar-container{
-  max-width: 100vw !important;
-}
-```  
+in [`userChrome.css`](./userChrome.css), the properties `--navbar-width`, 
+`--navbar-width-focused` and `--url-max-width-not-focused` are self explanatory. 
+customize however you want. don't forget to restart firefox to see the changes.
