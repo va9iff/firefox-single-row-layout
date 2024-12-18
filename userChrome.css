@@ -21,16 +21,16 @@
 }
 
 /* make navbar longer when focused */
-#nav-bar[urlbar-exceeds-toolbar-bounds="true"] {
+#nav-bar:has(#urlbar[open]){
   margin: -44px calc(100vw - var(--navbar-width-focused)) 0px 0px !important;
 }
 
 /* move tabs bar even more left when focused */
-#titlebar:has(+ #nav-bar[urlbar-exceeds-toolbar-bounds="true"]) #TabsToolbar {
+body:has(#urlbar[open]) #TabsToolbar {
   -moz-padding-start: var(--navbar-width-focused) !important;
 }
 
 /* make url field grow to url container when focused */
-#nav-bar[urlbar-exceeds-toolbar-bounds="true"] #urlbar-container{
+body:has(#urlbar[open]) #urlbar-container{
   max-width: 100vw !important;
 }
