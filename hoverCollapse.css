@@ -1,0 +1,36 @@
+/* tabs-width is the remaining part */
+
+:root {
+  --v-navbar-width: 230px; 
+  --v-url-max-width: 32px; 
+}
+:root:has(#urlbar-input:focus),
+:root:has(#urlbar-container:hover) {
+	--v-url-max-width: 600px;
+  --v-navbar-width: 550px; 
+}
+
+/* :root:has(#urlbar[open]) { */
+/* 	--v-url-max-width: 80vw; */
+/* 	--v-navbar-width: 80vw */
+/* } */
+
+
+/* applying */
+
+/* limit urlbar width for extension icons */
+#urlbar-container {
+  max-width: var(--v-url-max-width);
+}
+
+/* rise the url bar to top and margin from right to shrink its width */
+#nav-bar {
+  margin: -44px calc(100vw - var(--v-navbar-width)) 0px 0px !important;
+}
+
+/* give empty space in tabs' left for placing navbar */
+#TabsToolbar {
+  -moz-padding-start: var(--v-navbar-width) !important;
+}
+
+#urlbar-container:hover { transition: 430ms }
