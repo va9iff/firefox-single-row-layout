@@ -1,0 +1,34 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+
+	:root[lwt-newtab-brighttext] {
+		--newtab-background-color: #1d2021 !important;
+		--newtab-background-color-secondary: #2f3135 !important;;
+		--newtab-text-primary-color: #EFD789 !important;
+		/*--newtab-element-hover-color: #c1b5a0 !important*/
+	}
+
+	.logo-and-wordmark {
+		display: none !important;
+	}
+	.search-wrapper {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+
+	.outer-wrapper {
+		padding-top: 13px !important;
+		padding-bottom: 0 !important;
+	}
+
+	.top-sites {
+		padding-bottom: 0 !important;
+		padding-top: 0 !important;
+	}
+	.top-site-outer:is(:hover) .context-menu-button {
+		transition-delay: 2000ms !important
+	}
+	.search-handoff-button .fake-textbox {
+		opacity: 0.8 !important;
+	}
+
+}
